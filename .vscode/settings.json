@@ -6,6 +6,11 @@
     "statusBar.foreground": "#9EC8B9" // ステータスバーの文字色
   },
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
   "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.tabSize": 2,
+  "editor.tabSize": 2
 }

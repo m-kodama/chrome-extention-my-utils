@@ -6,4 +6,6 @@
     "statusBar.foreground": "#9EC8B9" // ステータスバーの文字色
   },
   "editor.formatOnSave": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.tabSize": 2,
 }

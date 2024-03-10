@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import '@material/web/button/filled-button.js'
 
 defineProps<{ msg: string }>()
 
@@ -10,7 +11,7 @@ const count = ref(0)
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <md-filled-button @click="count++">count is {{ count }}</md-filled-button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
@@ -35,3 +36,4 @@ const count = ref(0)
   color: #888;
 }
 </style>
+MdFilledButton,

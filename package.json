@@ -13,7 +13,6 @@
     "format": "eslint --fix && prettier --write ."
   },
   "dependencies": {
-    "@material/web": "^1.3.0",
     "vue": "^3.4.19"
   },
   "devDependencies": {
@@ -21,15 +20,19 @@
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
     "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.18",
     "chrome-types": "^0.1.270",
+    "daisyui": "^4.7.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-vue": "^9.22.0",
+    "postcss": "^8.4.35",
     "prettier": "^3.2.5",
     "stylelint": "^16.2.1",
     "stylelint-config-recess-order": "^5.0.0",
     "stylelint-config-recommended": "^14.0.0",
     "stylelint-config-recommended-scss": "^14.0.0",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
     "vue-tsc": "^1.8.27"

@@ -13,11 +13,11 @@
     "format": "eslint --fix && prettier --write ."
   },
   "dependencies": {
+    "@material/web": "^1.3.0",
     "vue": "^3.4.19"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.23",
-    "@material/web": "^1.3.0",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
     "@vitejs/plugin-vue": "^5.0.4",

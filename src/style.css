@@ -3,3 +3,13 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+/* Daisy UIのテーマ拡張 */
+[data-theme='material-design3-dark'] {
+  .tab {
+    color: var(--md-primary);
+    &:checked {
+      border-color: var(--md-primary);
+    }
+  }
+}

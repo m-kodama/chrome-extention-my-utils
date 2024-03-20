@@ -1,30 +1,27 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="main">
+    <div role="tablist" class="tabs tabs-bordered">
+      <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="Tab 1" checked />
+      <div role="tabpanel" class="tab-content p-10">Tab content 1</div>
+
+      <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="Tab 2" />
+      <div role="tabpanel" class="tab-content p-10">Tab content 2</div>
+
+      <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="Tab 3" />
+      <div role="tabpanel" class="tab-content p-10">
+        Tab content 3
+        <button class="btn btn-primary mt-10">Hello daisyUI!!</button>
+      </div>
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.main {
+  width: 800px;
+  height: 600px;
+  border: solid 1px #000;
 }
 </style>

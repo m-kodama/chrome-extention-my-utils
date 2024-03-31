@@ -21,7 +21,11 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Adding */
-    "types": ["chrome-types"]
+    "types": ["chrome-types"],
+    // "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

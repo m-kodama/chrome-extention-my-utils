@@ -2,14 +2,58 @@ html,
 body {
   margin: 0px;
   padding: 0px;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji;
 }
 
 /* Daisy UIのテーマ拡張 */
-[data-theme='material-design3-dark'] {
-  .tab {
-    color: var(--md-primary);
-    &:checked {
-      border-color: var(--md-primary);
+.tab {
+  color: var(--md-primary);
+  &:checked {
+    border-color: var(--md-primary);
+  }
+}
+.tab-active {
+  border-color: var(--md-primary);
+}
+.btn-square,
+.btn-circle {
+  background-color: transparent;
+  border: none;
+  color: var(--md-onSurface);
+  &:hover {
+    background-color: var(--md-surfaceVariant);
+  }
+  &.selected {
+    background-color: var(--md-secondaryContainer);
+    color: var(--md-onSecondaryContainer);
+  }
+}
+/* .modal-box {
+  border-radius: 1.5rem;
+} */
+.kbd {
+  background-color: var(--md-surfaceContainer);
+  color: var(--md-onSurface);
+  border-color: var(--md-surfaceVariant);
+}
+.tooltip {
+  --tooltip-color: var(--md-inverseSurface);
+  --tooltip-text-color: var(--md-inverseOnSurface);
+}
+.input {
+  border-color: var(--md-outlineVariant);
+  input {
+    &::placeholder {
+      color: var(--md-outlineVariant);
     }
   }
 }

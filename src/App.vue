@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSideMenu } from './composables/useSideMenu'
+import { useSideMenu } from '~/composables/useSideMenu'
 
 const { selectedMenuId, SideMenuId } = useSideMenu({})
 </script>

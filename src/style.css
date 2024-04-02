@@ -12,6 +12,12 @@ body {
     sans-serif,
     Apple Color Emoji,
     Segoe UI Emoji;
+  color: var(--md-onSurface);
+}
+.scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-primary) transparent;
 }
 
 /* Daisy UIのテーマ拡張 */

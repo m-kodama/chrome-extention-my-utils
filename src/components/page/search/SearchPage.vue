@@ -14,7 +14,7 @@
         <input type="text" class="grow" placeholder="ブックマーク / タブ / Confluence / JIRA / コマンド を検索" />
       </label>
     </div>
-    <div class="dialog-body px-6 py-4 grow overflow-scroll">
+    <div class="dialog-body px-6 py-4 grow scrollbar">
       <div class="flex mt-8">
         <div class="w-[100px] h-[100px] text-[color:--md-onSurface] bg-[color:--md-surfaceContainerLowest]">
           SCLowest

@@ -20,8 +20,8 @@
 .dialog-header {
   border-bottom: solid 1px var(--md-surfaceVariant);
 }
-.dialog-body {
-}
+/* .dialog-body {
+} */
 .dialog-footer {
   border-top: solid 1px var(--md-surfaceVariant);
 }

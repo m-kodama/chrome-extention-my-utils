@@ -7,11 +7,9 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Icon: typeof import('./src/components/common/Icon.vue')['default']
     SearchPage: typeof import('./src/components/page/search/SearchPage.vue')['default']
-    Setting: typeof import('./src/components/setting/Setting.vue')['default']
     SettingPage: typeof import('./src/components/page/setting/SettingPage.vue')['default']
-    SettingPane: typeof import('./src/components/page/setting/SettingPane.vue')['default']
     SettingPanel: typeof import('./src/components/page/setting/SettingPanel.vue')['default']
     ThemeColor: typeof import('./src/components/page/setting/ThemeColor.vue')['default']
     TheSideMenu: typeof import('./src/components/TheSideMenu.vue')['default']

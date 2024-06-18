@@ -1,7 +1,27 @@
-html,
-body {
-  margin: 0px;
-  padding: 0px;
+/* @font-face {
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/MaterialSymbolsRounded.woff2') format('woff2');
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+} */
+
+* {
   font-family:
     system-ui,
     -apple-system,
@@ -13,11 +33,17 @@ body {
     Apple Color Emoji,
     Segoe UI Emoji;
   color: var(--md-onSurface);
-}
-.scrollbar {
-  overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: var(--md-primary) transparent;
+}
+/* html,
+body, */
+#app {
+  margin: 0px;
+  padding: 0px;
+  /* width: 800px;
+  height: 600px; */
+  display: flex;
 }
 
 /* Daisy UIのテーマ拡張 */
@@ -46,6 +72,9 @@ body {
 /* .modal-box {
   border-radius: 1.5rem;
 } */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
 .kbd {
   background-color: var(--md-surfaceContainer);
   color: var(--md-onSurface);

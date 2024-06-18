@@ -3,9 +3,9 @@
 <template>
   <div class="flex flex-col grow bg-[color:--md-surface]">
     <div class="dialog-header">
-      <h2 class="text-2xl font-bold px-6 py-4">設定</h2>
+      <h2 class="text-2xl font-bold px-6 py-4">Settings</h2>
     </div>
-    <div class="dialog-body px-6 grow scrollbar">
+    <div class="dialog-body px-6 grow overflow-y-scroll">
       <ThemeColor></ThemeColor>
       <div class="w-[100px] h-[1000px] bg-[color:--md-surfaceContainerLowest]">SCLowest</div>
     </div>

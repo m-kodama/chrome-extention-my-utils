@@ -14,7 +14,7 @@ import themeMdLightPink from './md-light-pink.json'
 import themeMdPaleRose from './md-pale-rose.json'
 import themeMdLightLavender from './md-light-lavender.json'
 import themeMdLightPurple from './md-light-purple.json'
-import { computed, readonly, ref, watchEffect } from 'vue'
+import { Ref, computed, readonly, ref, watch } from 'vue'
 
 type Scheme =
   | 'light'
@@ -123,7 +123,7 @@ export const themes = Object.entries(themeData).flatMap(([themeKey, theme]) => {
   })
 })
 
-export const useThemeChanger = () => {
+export const useThemeChanger = (element: Ref<HTMLElement | null>) => {
   const themeKey = ref<ThemeKey>('paleGold')
   const mode = ref<Scheme>('dark')
   const changeThemeKey = (v: ThemeKey) => {
@@ -132,10 +132,12 @@ export const useThemeChanger = () => {
   const changeMode = (v: Scheme) => {
     mode.value = v
   }
-  watchEffect(() => {
-    const themeName = getThemeName(themeKey.value, mode.value)
-    document.documentElement.setAttribute('data-theme', themeName)
+
+  watch([themeKey, mode], ([newThemeKey, newMode]) => {
+    const themeName = getThemeName(newThemeKey, newMode)
+    element.value?.closest('#app-my-utils')?.setAttribute('data-theme', themeName)
   })
+
   const themeCatalog = computed(() => {
     return themes
       .map((theme) => {
@@ -148,6 +150,7 @@ export const useThemeChanger = () => {
       })
       .filter((catalog) => catalog.mode === mode.value)
   })
+
   return {
     themeKey: readonly(themeKey),
     mode: readonly(mode),

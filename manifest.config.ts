@@ -1,5 +1,6 @@
 // manifest.config.ts
 import { defineManifest } from '@crxjs/vite-plugin'
+import { isProd } from './config/utils'
 
 export const manifest = defineManifest({
   manifest_version: 3,
@@ -13,10 +14,20 @@ export const manifest = defineManifest({
   },
   permissions: [],
   action: { default_popup: 'index.html' },
-  // content_scripts: [
-  //   {
-  //     matches: ['<all_urls>'],
-  //     js: ['src/contentScripts/script'],
-  //   },
-  // ],
+  content_scripts: [
+    {
+      matches: ['<all_urls>'],
+      // matches: ['https://www.google.co.jp/*'],
+      js: ['src/contentScripts/script'],
+    },
+  ],
+  web_accessible_resources: [
+    {
+      matches: ['<all_urls>'],
+      // matches: ['https://www.google.co.jp/*'],
+      resources: isProd
+        ? ['assets/style.css', 'assets/MaterialSymbolsRounded.woff2']
+        : ['src/assets/tailwind.css', 'src/style.css'],
+    },
+  ],
 })

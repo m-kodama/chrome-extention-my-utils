@@ -1,12 +1,14 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useThemeChanger } from '~/theme/theme'
 
-const themeChanger = useThemeChanger()
+const element = ref<HTMLElement | null>(null)
+const themeChanger = useThemeChanger(element)
 </script>
 
 <template>
   <SettingPanel title="テーマカラー" class="mt-6">
-    <div class="flex flex-wrap gap-2 px-1">
+    <div ref="element" class="flex flex-wrap gap-2 px-1">
       <button
         class="p-0 btn bg-transparent hover:bg-[color:--md-surfaceVariant] w-[64px] h-[64px] flex justify-center items-center outline outline-1 outline-[color:--md-surfaceVariant] rounded-xl"
         @click="themeChanger.changeMode(themeChanger.mode.value === 'light' ? 'dark' : 'light')"
